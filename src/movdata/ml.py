@@ -33,7 +33,7 @@ def save_movies(year, per_page=10, sleep_time=1):
         #total_pages만큼 loop 해서 api 호출
         all_data = []
 
-        for page in tqdm(range(1, 11)):
+        for page in tqdm(range(1, total_pages + 1)):
                 time.sleep(sleep_time)
                 r = req(url_base +f"&curPage={page}")
                 d = r['movieListResult']['movieList']
